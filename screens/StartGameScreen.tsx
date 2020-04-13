@@ -16,6 +16,7 @@ import Input from '../components/Input';
 import NumberContainer from '../components/NumberContainer';
 import BodyText from '../components/BodyText';
 import TitleText from '../components/TitleText';
+import MainButton from '../components/MainButton';
 
 export default function StartGameScreen(props: {onStartGame: (selectedNumber: number) => void}) {
   let confirmedOutput;
@@ -53,7 +54,7 @@ export default function StartGameScreen(props: {onStartGame: (selectedNumber: nu
       <Text>You've selected</Text>
       <View>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button title='START GAME' onPress={() => props.onStartGame(selectedNumber)}/>
+        <MainButton onPress={() => props.onStartGame(selectedNumber)}>Start game</MainButton>
       </View>
     </Card>);
     }

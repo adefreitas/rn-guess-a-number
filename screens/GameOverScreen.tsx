@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, StyleSheet, Button, Image, Text} from 'react-native';
+import {View, StyleSheet, Image, Text} from 'react-native';
 
-import NumberContainer from '../components/NumberContainer';
 import TitleText from '../components/TitleText';
 import BodyText from '../components/BodyText';
 import Colors from '../constants/colors';
+import MainButton from '../components/MainButton';
 
 export default function GameOverScreen(props: any) {
   return (
@@ -22,7 +22,7 @@ export default function GameOverScreen(props: any) {
       <BodyText style={styles.message}>
         It took our little robot <Text style={styles.highlight}>{props.roundsNumber}</Text> rounds to guess your number
       </BodyText>
-      <Button title='Start a new game' onPress={props.onStartGame}/>
+      <MainButton onPress={props.onStartGame}>Start a new game</MainButton>
     </View>
   )
 }
